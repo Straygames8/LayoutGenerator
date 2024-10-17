@@ -1,5 +1,5 @@
 // api.js
-const API_URL = 'https://your-backend-url.onrender.com/api';
+const API_URL = 'https://layoutgenerator.onrender.com';
 
 export const getLayouts = async () => {
   const response = await fetch(`${API_URL}/layouts`);
