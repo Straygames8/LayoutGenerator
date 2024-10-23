@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+header a {
+    color: #e0e0e0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Orbitron', sans-serif;
+}
+header ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+}
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px;
+}
+header #branding {
+    float: left;
+}
+header #branding h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #ff6b6b;
+}
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+header .highlight, header .current a {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+header a:hover {
+    color: #4ecdc4;
+    transition: 0.3s;
+}
+#showcase {
+    min-height: 100vh;
+    background: url('../static/placeholder/1920/1080.png') no-repeat center center/cover; /* Update image path */
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#showcase .showcase-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+}
+#showcase h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+#showcase p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.btn {
+    display: inline-block;
+    background: #ff6b6b;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #4ecdc4;
+}
+#games {
+    padding: 40px 0;
+}
+#games h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    font-family: 'Orbitron', sans-serif;
+    color: #ff6b6b;
+}
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+.game-card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+}
+.game-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.game-card h3 {
+    padding: 20px;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    color: #4ecdc4;
+}
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #e0e0e0;
+    background-color: #1a1a1a;
+    text-align: center;
+}
