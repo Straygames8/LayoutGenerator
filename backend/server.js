@@ -9,9 +9,9 @@ const fs = require('fs');
 const net = require('net');
 
 const app = express();
-
+const uri = 'mongodb+srv://Straygames8:6bLOP1gfBzbJKRHs@cluster0.sbwruai.mongodb.net/test?retryWrites=true&w=majority'
 // Log the MongoDB URI to confirm it’s loaded correctly
-console.log("MongoDB URI:", process.env.MONGODB_URI);
+console.log("Hardcoded MongoDB URI:", uri);
 
 // Middleware
 app.use(cors());
@@ -24,7 +24,7 @@ if (!fs.existsSync(uploadsDir)){
 }
 
 // MongoDB connection with error handling
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
