@@ -10,6 +10,9 @@ const net = require('net');
 
 const app = express();
 
+// Log the MongoDB URI to confirm it’s loaded correctly
+console.log("MongoDB URI:", process.env.MONGODB_URI);
+
 // Middleware
 app.use(cors());
 app.use(express.json());
