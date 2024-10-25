@@ -1,6 +1,6 @@
 // App.js
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import LayoutEditor from './components/LayoutEditor';
 import LayoutList from './components/LayoutList';
@@ -37,18 +37,26 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <Switch>
-          <Route exact path="/">
-            <LayoutList 
-              layouts={layouts} 
-              onCreateLayout={handleCreateLayout}
-              onDeleteLayout={handleDeleteLayout}
-            />
-          </Route>
-          <Route path="/editor/:id">
-            <LayoutEditor onUpdateLayout={handleUpdateLayout} />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route 
+            path="/" 
+            element={
+              <LayoutList 
+                layouts={layouts} 
+                onCreateLayout={handleCreateLayout}
+                onDeleteLayout={handleDeleteLayout}
+              />
+            } 
+          />
+          <Route 
+            path="/editor/:id" 
+            element={
+              <LayoutEditor 
+                onUpdateLayout={handleUpdateLayout} 
+              />
+            } 
+          />
+        </Routes>
       </div>
     </Router>
   );

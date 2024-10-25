@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { ThreeDxf } from 'three-dxf';
+// import { DXFLoader } from "three-dxf-loader";?
 import { getLayout } from '../api';
 
 function LayoutEditor({ onUpdateLayout }) {
@@ -109,11 +110,6 @@ const API_URL = 'http://localhost:5000/api';
 
 export const getLayouts = async () => {
   const response = await fetch(`${API_URL}/layouts`);
-  return response.json();
-};
-
-export const getLayout = async (id) => {
-  const response = await fetch(`${API_URL}/layouts/${id}`);
   return response.json();
 };
 
